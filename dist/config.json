@@ -1,0 +1,10 @@
+{
+  "CLAIM_NAME": {
+    "value": "certificates-volume-claim",
+    "type": null
+  },
+  "VOLUME_NAME": {
+    "value": "certificates-volume",
+    "type": null
+  }
+}

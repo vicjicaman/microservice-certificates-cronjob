@@ -1,0 +1,40 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: certificates-cronjob
+  namespace: '${NAMESPACE@microservice-config}'
+  labels:
+    moduleid: microservice-certificates-cronjob
+    version: 1.70.0-master
+spec:
+  schedule: '*/1 * * * *'
+  concurrencyPolicy: Forbid
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+            -
+              name: app
+              image: 'repoflow/microservice-certificates-container:linked'
+              env:
+                -
+                  name: DOMAIN
+                  value: '${DOMAIN@microservice-config}'
+                -
+                  name: EMAIL
+                  value: '${EMAIL@microservice-config}'
+                -
+                  name: AWS_ACCESS_KEY_ID
+                  valueFrom: {secretKeyRef: {name: certbot, key: aws.key.id}}
+                -
+                  name: AWS_SECRET_ACCESS_KEY
+                  valueFrom: {secretKeyRef: {name: certbot, key: aws.secret.key}}
+              volumeMounts:
+                - mountPath: /certificates
+                  name: ${VOLUME_NAME}
+          restartPolicy: OnFailure
+          volumes:
+            - name: ${VOLUME_NAME}
+              persistentVolumeClaim:
+                claimName: ${CLAIM_NAME}

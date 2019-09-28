@@ -1,0 +1,17 @@
+{
+  "dependencies": {
+    "microservice-config": {
+      "url": "github.com:vicjicaman/microservice-config.git",
+      "version": "1.70.1-master"
+    }
+  },
+  "config": [
+  {
+    "name": "CLAIM_NAME",
+    "value": "certificates-volume-claim"
+  },
+  {
+    "name": "VOLUME_NAME",
+    "value": "certificates-volume"
+  }]
+}
