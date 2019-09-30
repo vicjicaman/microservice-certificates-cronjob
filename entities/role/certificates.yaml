@@ -1,0 +1,10 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  namespace: ${NAMESPACE@microservice-config}
+  name: ${ROLE_NAME}
+rules:
+- apiGroups: [""]
+  resources: ["secrets"]
+  resourceNames: ["${CERTIFICATES_SECRET}", "${CERTBOT_SECRET}" ]
+  verbs: ["update", "get"]

@@ -6,5 +6,21 @@
   "VOLUME_NAME": {
     "value": "certificates-volume",
     "type": null
+  },
+  "ACCOUNT_NAME": {
+    "value": "certificates-manager",
+    "type": null
+  },
+  "ROLE_NAME": {
+    "value": "certificates-manager-role",
+    "type": null
+  },
+  "CERTIFICATES_SECRET": {
+    "value": "certificates-secret",
+    "type": null
+  },
+  "CERTBOT_SECRET": {
+    "value": "cerbot-secret",
+    "type": null
   }
 }

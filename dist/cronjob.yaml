@@ -7,23 +7,27 @@ metadata:
     moduleid: microservice-certificates-cronjob
     version: 1.70.0-master
 spec:
-  schedule: '*/1 * * * *'
+  schedule: '0 1 * * *'
   concurrencyPolicy: Forbid
   jobTemplate:
     spec:
       template:
         spec:
+          serviceAccountName: certificates-manager-role
           containers:
             -
               name: app
               image: 'repoflow/microservice-certificates-container:linked'
               env:
                 -
+                  name: NAMESPACE
+                  value: microservices-namespace
+                -
                   name: DOMAIN
                   value: repoflow.com
                 -
                   name: EMAIL
-                  value: '${EMAIL@microservice-config}'
+                  value: vic.jicama@gmail.com
                 -
                   name: AWS_ACCESS_KEY_ID
                   valueFrom: {secretKeyRef: {name: certbot, key: aws.key.id}}
