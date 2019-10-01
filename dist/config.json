@@ -15,11 +15,11 @@
     "value": "certificates-manager-role",
     "type": null
   },
-  "CERTIFICATES_SECRET": {
+  "CERTIFICATES_SECRET_NAME": {
     "value": "certificates-secret",
     "type": null
   },
-  "CERTBOT_SECRET": {
+  "CERTBOT_SECRET_NAME": {
     "value": "cerbot-secret",
     "type": null
   }

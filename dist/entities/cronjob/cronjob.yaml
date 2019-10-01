@@ -29,6 +29,9 @@ spec:
                   name: EMAIL
                   value: vic.jicama@gmail.com
                 -
+                  name: CERTIFICATES_SECRET_NAME
+                  value: certificates-secret
+                -
                   name: AWS_ACCESS_KEY_ID
                   valueFrom: {secretKeyRef: {name: certbot, key: aws.key.id}}
                 -

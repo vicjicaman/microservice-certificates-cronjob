@@ -23,11 +23,11 @@
       "value": "certificates-manager-role"
     },
     {
-      "name": "CERTIFICATES_SECRET",
+      "name": "CERTIFICATES_SECRET_NAME",
       "value": "certificates-secret"
     },
     {
-      "name": "CERTBOT_SECRET",
+      "name": "CERTBOT_SECRET_NAME",
       "value": "cerbot-secret"
     }
   ]

@@ -6,5 +6,4 @@ metadata:
 rules:
 - apiGroups: [""]
   resources: ["secrets"]
-  resourceNames: ["${CERTIFICATES_SECRET}", "${CERTBOT_SECRET}" ]
-  verbs: ["update", "get"]
+  verbs: ["create", "update", "get"]

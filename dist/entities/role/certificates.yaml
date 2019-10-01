@@ -9,9 +9,7 @@ rules:
       - ""
     resources:
       - secrets
-    resourceNames:
-      - certificates-secret
-      - cerbot-secret
     verbs:
+      - create
       - update
       - get
