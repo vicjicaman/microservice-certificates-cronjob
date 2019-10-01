@@ -6,29 +6,29 @@
     }
   },
   "config": [
-  {
-    "name": "CLAIM_NAME",
-    "value": "certificates-volume-claim"
-  },
-  {
-    "name": "VOLUME_NAME",
-    "value": "certificates-volume"
-  },
-  {
-    "name": "ACCOUNT_NAME",
-    "value": "certificates-manager"
-  },
-  {
-    "name": "ROLE_NAME",
-    "value": "certificates-manager-role"
-  },
-  {
-    "name": "CERTIFICATES_SECRET",
-    "value": "certificates-secret"
-  },
-  {
-    "name": "CERTBOT_SECRET",
-    "value": "cerbot-secret"
-  }
-]
+    {
+      "name": "CLAIM_NAME",
+      "value": "certificates-volume-claim"
+    },
+    {
+      "name": "VOLUME_NAME",
+      "value": "certificates-volume"
+    },
+    {
+      "name": "ACCOUNT_NAME",
+      "value": "certificates-manager"
+    },
+    {
+      "name": "ROLE_NAME",
+      "value": "certificates-manager-role"
+    },
+    {
+      "name": "CERTIFICATES_SECRET",
+      "value": "certificates-secret"
+    },
+    {
+      "name": "CERTBOT_SECRET",
+      "value": "cerbot-secret"
+    }
+  ]
 }
