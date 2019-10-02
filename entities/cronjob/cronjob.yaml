@@ -5,7 +5,7 @@ metadata:
   namespace: '${NAMESPACE@microservice-config}'
   labels:
     moduleid: microservice-certificates-cronjob
-    version: 1.70.0-master
+    version: 1.70.0-ssl-job-prod
 spec:
   schedule: '0 1 * * *'
   concurrencyPolicy: Forbid
@@ -17,7 +17,7 @@ spec:
           containers:
             -
               name: app
-              image: 'repoflow/microservice-certificates-container:linked'
+              image: 'repoflow/microservice-certificates-container:1.70.0-ssl-job-prod'
               env:
                 -
                   name: NAMESPACE
@@ -30,7 +30,7 @@ spec:
                   value: vic.jicama@gmail.com
                 -
                   name: CERTIFICATES_SECRET_NAME
-                  value: ${CERTIFICATES_SECRET_NAME}
+                  value: '${CERTIFICATES_SECRET_NAME}'
                 -
                   name: AWS_ACCESS_KEY_ID
                   valueFrom: {secretKeyRef: {name: certbot, key: aws.key.id}}
